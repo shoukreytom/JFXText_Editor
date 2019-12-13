@@ -36,7 +36,7 @@ public class Controller {
             new Thread() {
                 @Override
                 public void run() {
-                    screen.appendText(readFile(file).toString());
+                    screen.setText(readFile(file).toString());
                 }
             }.run();
         }
