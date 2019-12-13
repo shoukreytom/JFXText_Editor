@@ -1,0 +1,40 @@
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<BorderPane fx:controller="sample.Controller"
+            xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <MenuBar>
+            <Menu text="File" style="-fx-font-size: 18;">
+                <MenuItem text="New" onAction="#newFile" accelerator="Ctrl+N"/>
+                <MenuItem text="Open" onAction="#openFile" accelerator="Ctrl+O"/>
+                <MenuItem text="Save" onAction="#saveFile" accelerator="Ctrl+S"/>
+                <MenuItem text="Save As" onAction="#saveAs" accelerator="Ctrl+Shift+S"/>
+                <SeparatorMenuItem/>
+                <MenuItem text="Exit" onAction="#exit" accelerator="Ctrl+Q"/>
+            </Menu>
+            <Menu text="Edit" style="-fx-font-size: 18;">
+                <MenuItem text="Undo" accelerator="Ctrl+Z" onAction="#undo"/>
+                <MenuItem text="Redo" accelerator="Ctrl+Y" onAction="#redo"/>
+                <MenuItem text="Copy" accelerator="Ctrl+C" onAction="#copy"/>
+                <MenuItem text="Cut" accelerator="Ctrl+X" onAction="#cut"/>
+                <MenuItem text="Paste" accelerator="Ctrl+V" onAction="#paste"/>
+                <MenuItem text="Select All" accelerator="Ctrl+A" onAction="#selectAll"/>
+            </Menu>
+            <Menu text="Help" style="-fx-font-size: 18;">
+                <MenuItem text="About" accelerator="F1" onAction="#about"/>
+            </Menu>
+        </MenuBar>
+    </top>
+    <center>
+        <TextArea fx:id="screen" style="-fx-border-color:#ffffff;">
+            <font>
+                <Font name="New Times Roman bold" size="18"/>
+            </font>
+        </TextArea>
+    </center>
+</BorderPane>
